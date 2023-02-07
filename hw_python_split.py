@@ -3,6 +3,6 @@ property_transfer_xml = """
 //ns1:loginResponse/loginReturn[1]</con:sourcePath><con:targetType>Request</con:targetType><con:targetStep>multiCall</con:targetStep><con:targetPath>declare namespace urn='urn:Magento';
 //urn:multiCall/sessionId['?']</con:targetPath>
 """
-property_transfer_xml.strip()
 result = property_transfer_xml.split('con:targetType')
-print(result)
+result[1] = result[1].strip('>''/''<')
+print(result[1])
